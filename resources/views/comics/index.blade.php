@@ -27,7 +27,9 @@
 
             <tr>
               <td>
-                <img src="{{$comic->thumb}}" alt="">
+                <div class="my-table-thumb">
+                  <img src="{{$comic->thumb}}" alt="">
+                </div>
               </td>
               <td>{{$comic->title}}</td>
               <td>{{$comic->price}}</td>
