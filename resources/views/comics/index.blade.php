@@ -10,7 +10,32 @@
     </div>
     
     <div class="container">
-      @dump($comics)
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Series</th>
+            <th>Sale Date</th>
+            <th>Type</th>
+            <th>{{-- fill --}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach ($comics as $comic)
+
+            <tr>
+              <td>{{$comic->title}}</td>
+              <td>{{$comic->price}}</td>
+              <td>{{$comic->series}}</td>
+              <td>{{$comic->sale_date}}</td>
+              <td>{{$comic->type}}</td>
+              <td>Pulsanti</td>
+            </tr>
+              
+          @endforeach
+        </tbody>
+      </table>
     </div>
   </main>
     
