@@ -13,6 +13,7 @@
       <table class="table">
         <thead>
           <tr>
+            <th>Cover</th>
             <th>Title</th>
             <th>Price</th>
             <th>Series</th>
@@ -25,6 +26,9 @@
           @foreach ($comics as $comic)
 
             <tr>
+              <td>
+                <img src="{{$comic->thumb}}" alt="">
+              </td>
               <td>{{$comic->title}}</td>
               <td>{{$comic->price}}</td>
               <td>{{$comic->series}}</td>
