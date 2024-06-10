@@ -36,7 +36,10 @@
               <td>{{$comic->series}}</td>
               <td>{{$comic->sale_date}}</td>
               <td>{{$comic->type}}</td>
-              <td>Pulsanti</td>
+              <td>
+                <button class="btn btn-primary mb-3">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+              </td>
             </tr>
               
           @endforeach
