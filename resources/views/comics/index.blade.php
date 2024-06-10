@@ -5,7 +5,7 @@
 @section('content')
 
   <main>
-    <div class="container">
+    <div class="container py-5">
       <h1>Comics</h1>
     </div>
     
@@ -31,7 +31,7 @@
                   <img src="{{$comic->thumb}}" alt="">
                 </div>
               </td>
-              <td>{{$comic->title}}</td>
+              <td><a href="{{ route('comics.show', $comic) }}">{{$comic->title}}</a></td>
               <td>{{$comic->price}}</td>
               <td>{{$comic->series}}</td>
               <td>{{$comic->sale_date}}</td>

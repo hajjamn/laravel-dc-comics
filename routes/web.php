@@ -19,5 +19,13 @@ Route::get('/', function () {
 });
 
 //COMICS CRUD
-
+//index
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+
+//create
+Route::get('/comcis/create', [ComicController::class, 'create'])->name('comics.create');
+
+//show
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
+
+//store
