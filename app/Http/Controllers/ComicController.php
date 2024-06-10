@@ -45,10 +45,14 @@ class ComicController extends Controller
 
     }
 
-    public function update()
+    public function update(Request $request, Comic $comic)
     {
 
-        dd('update');
+        $form_data = $request->all();
+
+        $comic->update($form_data);
+
+        return to_route('comics.show', $comic);
 
     }
 }
