@@ -28,17 +28,27 @@
             <tr>
               <td>
                 <div class="my-table-thumb">
-                  <img src="{{$comic->thumb}}" alt="">
+                  <a href="{{ route('comics.edit', $comic) }}">
+                    <img src="{{$comic->thumb}}" alt="">
+                  </a>
                 </div>
               </td>
-              <td><a href="{{ route('comics.show', $comic) }}">{{$comic->title}}</a></td>
+              <td><a href="{{ route('comics.show', $comic) }}">
+                <span>{{$comic->title}}</span>
+              </a></td>
               <td>{{$comic->price}}</td>
               <td>{{$comic->series}}</td>
               <td>{{$comic->sale_date}}</td>
               <td>{{$comic->type}}</td>
               <td>
-                <a href="{{ route('comics.edit', $comic) }}"><button class="btn btn-primary mb-3">Edit</button></a>
-                <button class="btn btn-danger">Delete</button>
+                <a href="{{ route('comics.edit', $comic) }}">
+                  <button class="btn btn-primary mb-3">Edit</button>
+                </a>
+                <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                  @method('DELETE')
+                  @csrf
+                  <button class="btn btn-danger">Delete</button>
+                </form>
               </td>
             </tr>
               
